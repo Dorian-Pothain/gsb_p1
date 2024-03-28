@@ -1,5 +1,5 @@
 <template>
-  <v-sheet class="bg-gradient pa-12" rounded>
+  <v-sheet class="bg-white pa-12" rounded>
     <v-card class="mx-auto px-6 py-8" max-width="344">
       <v-form v-model="form" @submit.prevent="onSubmit">
         <v-text-field
@@ -16,7 +16,7 @@
           :readonly="loading"
           :rules="[required]"
           clearable
-          label="Mot de passe"
+          label="Password"
           placeholder="Entrez votre mot de passe"
           type="password"
         ></v-text-field>
@@ -24,7 +24,7 @@
         <br />
 
         <v-btn
-        @click = "getLogin"
+          @click = "getLogin"
           :loading="loading"
           block
           color="#5cf5b5"
@@ -95,11 +95,12 @@ export default {
     }
   }
 };
-
-
-
-
 </script>
+
+
+
+
+
 
 <style scoped>
   .error-message {

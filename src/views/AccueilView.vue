@@ -1,36 +1,28 @@
 <template>
   <NavbarComponent />
-  Bienvenue {{ this.$store.state.utilisateur.nom + " "+this.$store.state.utilisateur.prenom }}
-  
-  <div>
-    <h1>Caractéristique d'un pinguin Avcii en liberté sur la banquise !</h1>
+  Bienvenue {{ this.$store.state.utilisateur.nom +" "+ this.$store.state.utilisateur.prenom}}
 
-    <!-- Afficher les informations de l'utilisateur -->
-    <div v-if="utilisateur">
-      <p> {{ utilisateur }}</p>
+  <div>
+      <h1>Pinguin</h1>
+      <div v-if="utilisateur">
+        <p>{{ utilisateur }}</p>
+      </div>
       
-      
-    </div>
   </div>
 </template>
-
+  
 <script>
-
-import NavbarComponent from '../components/NavbarComponent.vue';
+import NavbarComponent from '../components/NavbarComponent.vue'
 
 export default {
-  components : {
-    NavbarComponent
+  components: {
+    NavbarComponent,
   },
-  computed: {
-    // Utilisez une propriété calculée pour accéder aux informations de l'utilisateur depuis le store
-    utilisateur() {
+  computed:{
+    utilisateur(){
       return this.$store.state.utilisateur;
-    },
-  },
-};
-
-
+    }
+  }
+}
 </script>
-
-
+  
